@@ -1,5 +1,3 @@
-# avrora-test
-
 ## Project setup
 ```
 npm install
