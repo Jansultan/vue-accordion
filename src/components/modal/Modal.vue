@@ -99,14 +99,14 @@ export default {
     update() {
       if ((this.form.name && this.form.count) || this.getOneDivision[1].val == 0) {
         var indexDivision;
-        console.log(
-          "this.getOneDivision[1].indexItem = ",
-          this.getOneDivision[1].indexItem
-        );
-        console.log(
-          "this.getOneDivision[1].main_index = ",
-          this.getOneDivision[1].main_index
-        );
+        // console.log(
+        //   "this.getOneDivision[1].indexItem = ",
+        //   this.getOneDivision[1].indexItem
+        // );
+        // console.log(
+        //   "this.getOneDivision[1].main_index = ",
+        //   this.getOneDivision[1].main_index
+        // );
         if (this.getOneDivision[1].indexItem != null) {
           indexDivision = this.getOneDivision[1].main_index +"_" +this.getOneDivision[1].indexItem;
         } else {
