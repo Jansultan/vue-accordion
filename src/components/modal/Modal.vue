@@ -22,7 +22,10 @@
           Обязательное поле
         </p>
       </div>
-      <div class="form-group" :class="getOneDivision[1].val == 0? 'block_none': ''">
+      <div
+        class="form-group"
+        :class="getOneDivision[1].val == 0 ? 'block_none' : ''"
+      >
         <label for="count">Обшее количество:</label>
         <input
           id="count"
@@ -97,7 +100,10 @@ export default {
       }
     },
     update() {
-      if ((this.form.name && this.form.count) || this.getOneDivision[1].val == 0) {
+      if (
+        (this.form.name && this.form.count) ||
+        this.getOneDivision[1].val == 0
+      ) {
         var indexDivision;
         // console.log(
         //   "this.getOneDivision[1].indexItem = ",
@@ -108,7 +114,10 @@ export default {
         //   this.getOneDivision[1].main_index
         // );
         if (this.getOneDivision[1].indexItem != null) {
-          indexDivision = this.getOneDivision[1].main_index +"_" +this.getOneDivision[1].indexItem;
+          indexDivision =
+            this.getOneDivision[1].main_index +
+            "_" +
+            this.getOneDivision[1].indexItem;
         } else {
           indexDivision = this.getOneDivision[1].main_index;
         }
@@ -141,6 +150,11 @@ export default {
     height: 100%;
     h3 {
       margin-bottom: 30px;
+      text-align: center;
+      font-size: 20px;
+      line-height: 30px;
+      letter-spacing: 0.05em;
+      color: #000000;
     }
     label {
       width: 100%;
@@ -174,17 +188,27 @@ export default {
       button {
         margin-left: 10px;
         height: 60px;
-        filter: drop-shadow(0px 0px 10px rgba(16, 112, 177, 0.2));
-        box-shadow: 0px 1px 0px rgba(16, 112, 177, 0.2);
+        background: #5a98d0;
+        border: 1px solid #5a98d0;
         border-radius: 10px;
+        transition: all 0.5ms;
+        font-size: 16px;
+        line-height: 26px;
+        text-align: center;
+        letter-spacing: 0.04em;
+        color: #ffffff;
         &:first-of-type {
           margin-right: auto;
+        }
+        &:hover {
+          filter: drop-shadow(0px 0px 10px rgba(16, 112, 177, 0.2));
+          box-shadow: 0px 1px 0px rgba(16, 112, 177, 0.2);
         }
       }
     }
   }
 
-  .block_none{
+  .block_none {
     display: none;
   }
 }
